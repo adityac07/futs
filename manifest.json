@@ -1,0 +1,28 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "js/eventPage.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon16.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "js/contentScript.js" ],
+      "matches": [ "*://www.easports.com/*fifa/ultimate-team/web-app/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+   "description": "shortfuts augments the FIFA Ultimate Team (FUT) web app, primarily using keybinds to make common tasks easier to accomplish.",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtmZPFc1B0tGg1VjoXFliiIu0e0XkqVWmCS+sywNzpHzuxQgsEqNx8nySBhEnNDbfFMC11NkGEkrENZitokRvcYb7yvqqmUVXtQ/XW9FNhJJY5TH0sHuNYeUncmsPuKoPj0Ty4RRFEdwQLYL6758rhuHb4FhzTVhh8z7oqUrTgbKmaAU2S8gChkYs2X9OBTDKokjxyOMvpP65RgTZ3w6JZeTfYqAul6yhhG7Z3Ru9AoiY/eZTkin1TgeLOUkqU9leIjlhvtL+za3N8DPyeoPkd/ue+pAXcBf9CL30EUtEzCjdGZV5d7UU5ATDjSNlMa4H9lcNwAnPk4bcXtTDXqVnVQIDAQAB",
+   "manifest_version": 2,
+   "name": "shortfuts",
+   "permissions": [ "storage", "identity", "identity.email", "*://apisf.futalert.co.uk/" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "11.6.1",
+   "web_accessible_resources": [ "chief.png", "futAlert.jpg", "js/injected.js" ]
+}
